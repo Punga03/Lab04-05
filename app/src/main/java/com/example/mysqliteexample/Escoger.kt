@@ -17,5 +17,9 @@ class Escoger : AppCompatActivity() {
             startActivity(Intent(this,Cursos::class.java))
         }
 
+        findViewById<Button>(R.id.prf).setOnClickListener{
+            startActivity(Intent(this,Profesor::class.java))
+        }
+
     }
 }

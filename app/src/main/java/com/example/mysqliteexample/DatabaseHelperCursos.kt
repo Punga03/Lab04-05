@@ -6,39 +6,19 @@ import android.content.ContentValues
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 
-/**
- * Let's start by creating our database CRUD helper class
- * based on the SQLiteHelper.
- */
 class DatabaseHelperCursos(context: Context) :
         SQLiteOpenHelper(context, DATABASE_NAME, null, 1) {
 
-    /**
-     * Our onCreate() method.
-     * Called when the database is created for the first time. This is
-     * where the creation of tables and the initial population of the tables
-     * should happen.
-     */
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL("CREATE TABLE $TABLE_NAME2 (CODIGO INTEGER PRIMARY KEY " +
                 "AUTOINCREMENT, NOMBRE TEXT,CREDITOS TEXT, HORASSEMANALES TEXT )")
     }
 
-    /**
-     * Let's create Our onUpgrade method
-     * Called when the database needs to be upgraded. The implementation should
-     * use this method to drop tables, add tables, or do anything else it needs
-     * to upgrade to the new schema version.
-     */
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME2)
         onCreate(db)
     }
 
-    /**
-     * Let's create our insertData() method.
-     * It Will insert data to SQLIte database.
-     */
     fun insertData(nombre: String, creditos: String, horas: String) {
         val db = this.writableDatabase
         val contentValues = ContentValues()

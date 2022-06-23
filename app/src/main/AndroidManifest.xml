@@ -10,6 +10,9 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.MySqliteExample">
         <activity
+                android:name=".Profesor"
+                android:exported="true"/>
+        <activity
                 android:name=".Escoger"
                 android:exported="true"/>
         <activity

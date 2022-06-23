@@ -6,45 +6,31 @@ import android.content.ContentValues
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 
-/**
- * Let's start by creating our database CRUD helper class
- * based on the SQLiteHelper.
- */
 class DatabaseHelper(context: Context) :
         SQLiteOpenHelper(context, DATABASE_NAME, null, 1) {
 
-    /**
-     * Our onCreate() method.
-     * Called when the database is created for the first time. This is
-     * where the creation of tables and the initial population of the tables
-     * should happen.
-     */
+
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL("CREATE TABLE $TABLE_NAME (ID INTEGER PRIMARY KEY " +
-                "AUTOINCREMENT,NAME TEXT,TELEFONO TEXT,EMAIL TEXT, FECHANACIMIENTO TEXT, CARRERA TEXT)")
+                ",NAME TEXT,TELEFONO TEXT,EMAIL TEXT, FECHANACIMIENTO TEXT, CARRERA TEXT)")
 
         db.execSQL("CREATE TABLE ${DatabaseHelperCursos.TABLE_NAME2} (CODIGO INTEGER PRIMARY KEY " +
                 "AUTOINCREMENT, NOMBRE TEXT,CREDITOS TEXT,  HORASSEMANALES TEXT)")
+
+        db.execSQL("CREATE TABLE ${DatabaseHelperProfesor.TABLE_NAME3} (CEDULA INTEGER PRIMARY KEY " +"" +
+                ", NOMBRE TEXT,TELEFONO TEXT, EMAIL TEXT )")
     }
 
-    /**
-     * Let's create Our onUpgrade method
-     * Called when the database needs to be upgraded. The implementation should
-     * use this method to drop tables, add tables, or do anything else it needs
-     * to upgrade to the new schema version.
-     */
+
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME)
         onCreate(db)
     }
 
-    /**
-     * Let's create our insertData() method.
-     * It Will insert data to SQLIte database.
-     */
-    fun insertData(name: String, surname: String, marks: String, fecha:String, carrera:String) {
+    fun insertData(id:String, name: String, surname: String, marks: String, fecha:String, carrera:String) {
         val db = this.writableDatabase
         val contentValues = ContentValues()
+        contentValues.put(COL_1, id)
         contentValues.put(COL_2, name)
         contentValues.put(COL_3, surname)
         contentValues.put(COL_4, marks)
