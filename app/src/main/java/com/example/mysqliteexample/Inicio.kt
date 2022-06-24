@@ -10,8 +10,11 @@ class Inicio : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_inicio)
 
-        findViewById<Button>(R.id.btnEntrar).setOnClickListener{
+        /*findViewById<Button>(R.id.btnEntrar).setOnClickListener{
             startActivity(Intent(this,Escoger::class.java))
+        }*/
+        findViewById<Button>(R.id.btnEntrar).setOnClickListener{
+            startActivity(Intent(this,listView::class.java))
         }
     }
 }
