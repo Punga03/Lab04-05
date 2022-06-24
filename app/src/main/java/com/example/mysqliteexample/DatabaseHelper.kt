@@ -19,6 +19,12 @@ class DatabaseHelper(context: Context) :
 
         db.execSQL("CREATE TABLE ${DatabaseHelperProfesor.TABLE_NAME3} (CEDULA INTEGER PRIMARY KEY " +"" +
                 ", NOMBRE TEXT,TELEFONO TEXT, EMAIL TEXT )")
+
+        db.execSQL("CREATE TABLE ${DatabaseHelperCiclo.TABLE_NAME4} (ID INTEGER PRIMARY KEY " +
+                "AUTOINCREMENT, NUMERO TEXT,FECHAINICIO TEXT, FECHAFINAL TEXT,ANNO TEXT )")
+
+        db.execSQL("CREATE TABLE ${DatabaseHelperCarrera.TABLE_NAME5} (CODIGO PRIMARY KEY " +
+                ", NOMBRE TEXT,TITULO TEXT, ANNO TEXT,CICLO TEXT )")
     }
 
 
