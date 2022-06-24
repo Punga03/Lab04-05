@@ -18,11 +18,6 @@
                 android:name=".ciclo"
                 android:exported="true"/>
         <activity
-                android:name=".Ciclo"
-                android:exported="true"
-                android:label="@string/title_activity_ciclo"
-                android:theme="@style/Theme.MySqliteExample.NoActionBar"/>
-        <activity
                 android:name=".listView"
                 android:exported="true"/>
         <activity
@@ -37,7 +32,9 @@
         <activity
                 android:name=".Cursos"
                 android:exported="true"/>
-        <activity android:name=".Inicio">
+
+        <activity android:name=".Inicio"  android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

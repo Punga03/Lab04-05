@@ -146,5 +146,3 @@ class Carrera : AppCompatActivity() {
 
 
 
-
-}
