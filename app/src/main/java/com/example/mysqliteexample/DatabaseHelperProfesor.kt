@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
 class DatabaseHelperProfesor(context: Context) :
-    SQLiteOpenHelper(context, DatabaseHelper.DATABASE_NAME, null, 1)  {
+    SQLiteOpenHelper(context, DatabaseHelperProfesor.DATABASE_NAME, null, 1)  {
 
 
     override fun onCreate(db: SQLiteDatabase) {
@@ -22,10 +22,10 @@ class DatabaseHelperProfesor(context: Context) :
     fun insertData(cedula:String, nombre: String, telefono: String, email: String) {
         val db = this.writableDatabase
         val contentValues = ContentValues()
-        contentValues.put(DatabaseHelperCursos.COL_1, cedula)
-        contentValues.put(DatabaseHelperCursos.COL_2, nombre)
-        contentValues.put(DatabaseHelperCursos.COL_3, telefono)
-        contentValues.put(DatabaseHelperCursos.COL_4, email)
+        contentValues.put(DatabaseHelperProfesor.COL_1, cedula)
+        contentValues.put(DatabaseHelperProfesor.COL_2, nombre)
+        contentValues.put(DatabaseHelperProfesor.COL_3, telefono)
+        contentValues.put(DatabaseHelperProfesor.COL_4, email)
         db.insert(DatabaseHelperProfesor.TABLE_NAME3, null, contentValues)
     }
 
@@ -33,11 +33,11 @@ class DatabaseHelperProfesor(context: Context) :
             Boolean {
         val db = this.writableDatabase
         val contentValues = ContentValues()
-        contentValues.put(DatabaseHelperCursos.COL_1, cedula)
-        contentValues.put(DatabaseHelperCursos.COL_2, nombre)
-        contentValues.put(DatabaseHelperCursos.COL_3, telefono)
-        contentValues.put(DatabaseHelperCursos.COL_4, email)
-        db.update(DatabaseHelperProfesor.TABLE_NAME3, contentValues, "CODIGO = ?", arrayOf(cedula))
+        contentValues.put(DatabaseHelperProfesor.COL_1, cedula)
+        contentValues.put(DatabaseHelperProfesor.COL_2, nombre)
+        contentValues.put(DatabaseHelperProfesor.COL_3, telefono)
+        contentValues.put(DatabaseHelperProfesor.COL_4, email)
+        db.update(DatabaseHelperProfesor.TABLE_NAME3, contentValues, "CEDULA = ?", arrayOf(cedula))
         return true
     }
 
@@ -56,7 +56,7 @@ class DatabaseHelperProfesor(context: Context) :
     fun searchData (codigo: String) :Cursor
     {
         val db = this.writableDatabase
-        val querySearch = "SELECT * FROM " + DatabaseHelperProfesor.TABLE_NAME3 + " WHERE CODIGO = '"+codigo+"'"
+        val querySearch = "SELECT * FROM " + DatabaseHelperProfesor.TABLE_NAME3 + " WHERE CEDULA = '"+codigo+"'"
         val res = db.rawQuery(querySearch, null)
         return res
     }
@@ -69,4 +69,5 @@ class DatabaseHelperProfesor(context: Context) :
         val COL_3 = "TELEFONO "
         val COL_4 = "EMAIL "
     }
+
 }

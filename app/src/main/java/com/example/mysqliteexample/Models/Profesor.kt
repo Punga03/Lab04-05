@@ -1,6 +1,8 @@
 package com.example.mysqliteexample.Models
 
-class Profesor: java.io.Serializable {
+import java.io.Serializable
+
+class Profesor: Serializable {
 
     var cedula:Int = 0
     var nombre:String = ""

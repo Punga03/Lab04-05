@@ -59,7 +59,7 @@ class Profesor : AppCompatActivity() {
     fun handleUpdates() {
         updateBtnP.setOnClickListener {
             try {
-                val isUpdate = dbHelper.updateData(idTxt.text.toString(),
+                val isUpdate = dbHelper.updateData(cedulaP.text.toString(),
                     nameP.text.toString(),
                     telefonoP.text.toString(),
                     emailP.text.toString()
@@ -101,7 +101,7 @@ class Profesor : AppCompatActivity() {
                     buffer.append("CEDULA :" + res.getString(0) + "\n")
                     buffer.append("NOMBRE :" + res.getString(1) + "\n")
                     buffer.append("TELEFONO :" + res.getString(2) + "\n")
-                    buffer.append("EMAIL :" + res.getString(3) + "\n")
+                    buffer.append("EMAIL :" + res.getString(3) + "\n\n")
                 }
                 showDialog("Data Listing", buffer.toString())
             }
@@ -121,7 +121,7 @@ class Profesor : AppCompatActivity() {
                     buffer.append("CEDULA :" + res.getString(0) + "\n")
                     buffer.append("NOMBRE :" + res.getString(1) + "\n")
                     buffer.append("TELEFONO :" + res.getString(2) + "\n")
-                    buffer.append("EMAIL :" + res.getString(3) + "\n")
+                    buffer.append("EMAIL :" + res.getString(3) + "\n\n")
                 }
                 showDialog("Dato", buffer.toString())
             }
