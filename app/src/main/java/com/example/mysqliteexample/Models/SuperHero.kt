@@ -5,4 +5,4 @@ data class SuperHero (
     val publisher:String,
     val realName:String,
     val image:String
-    )
+    ):java.io.Serializable
