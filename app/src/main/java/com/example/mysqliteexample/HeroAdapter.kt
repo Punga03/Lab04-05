@@ -5,9 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mysqliteexample.Models.Alumno
 import com.example.mysqliteexample.Models.SuperHero
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_superhero.view.*

@@ -53,10 +53,10 @@ class DatabaseHelperProfesor(context: Context) :
             return res
         }
 
-    fun searchData (codigo: String) :Cursor
+    fun searchData (cedula: String) :Cursor
     {
         val db = this.writableDatabase
-        val querySearch = "SELECT * FROM " + DatabaseHelperProfesor.TABLE_NAME3 + " WHERE CEDULA = '"+codigo+"'"
+        val querySearch = "SELECT * FROM " + DatabaseHelperProfesor.TABLE_NAME3 + " WHERE CEDULA = '"+cedula+"'"
         val res = db.rawQuery(querySearch, null)
         return res
     }

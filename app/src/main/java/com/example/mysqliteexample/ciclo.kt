@@ -136,17 +136,4 @@ class ciclo : AppCompatActivity() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

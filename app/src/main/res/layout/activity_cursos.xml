@@ -6,7 +6,7 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              tools:context=".Cursos" android:background="#009688">
+              tools:context=".Cursos" android:background="#00BCD4">
 
     <LinearLayout
             android:orientation="horizontal"
@@ -178,7 +178,7 @@
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal" android:background="#009688">
+            android:orientation="horizontal" android:background="#00BCD4">
 
         <Button
                 android:id="@+id/viewBtn"

@@ -5,7 +5,7 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              tools:context=".Cursos" android:background="#009688">
+              tools:context=".ciclo" android:background="#00BCD4">
 
     <LinearLayout
             android:orientation="horizontal"
@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:hint="NUMERO"/>
+                android:hint="NUMERO (1ERO-2NDO)"/>
     </LinearLayout>
 
     <LinearLayout
@@ -200,7 +200,7 @@
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal" android:background="#009688">
+            android:orientation="horizontal" android:background="#00BCD4">
 
         <Button
                 android:id="@+id/viewBtnCiclo"
