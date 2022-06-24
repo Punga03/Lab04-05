@@ -2,7 +2,7 @@ package com.example.mysqliteexample.Models;
 
 public class Alumno {
 
-    private int cedula;
+    private String cedula;
     private String nombre;
     private int telefono;
     private String email;
@@ -12,7 +12,7 @@ public class Alumno {
     private String rol;
 
     Alumno(){
-        this.cedula=0;
+        this.cedula="";
         this.nombre="";
         this.telefono=0;
         this.email="";
@@ -22,7 +22,7 @@ public class Alumno {
         this.rol="";
     }
 
-    public Alumno(int cedula, String nombre, int telefono, String email, String fechaNacimiento, String carrera, String clave, String rol) {
+    public Alumno(String cedula, String nombre, int telefono, String email, String fechaNacimiento, String carrera, String clave, String rol) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.telefono = telefono;
@@ -33,11 +33,11 @@ public class Alumno {
         this.rol = rol;
     }
 
-    public int getCedula() {
+    public String getCedula() {
         return cedula;
     }
 
-    public void setCedula(int cedula) {
+    public void setCedula(String cedula) {
         this.cedula = cedula;
     }
 

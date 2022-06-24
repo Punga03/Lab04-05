@@ -23,19 +23,46 @@ class LoginProfesor : AppCompatActivity() {
             val user_name = et_user_name.text;
             val password = et_password.text;
 
-             val profe1 =
-                 com.example.mysqliteexample.Models.Profesor("123","Pablo","87542165","pablo@gmail.com","pablito","profesor");
+             val profe1 = com.example.mysqliteexample.Models.Profesor("123","Pablo",
+                 "87542165","pablo@gmail.com","pablito","profesor");
+
+            val profe2 = com.example.mysqliteexample.Models.Profesor("234","Jhonny",
+                "87878787","jhnonny@gmail.com","jhony123","profesor");
+
+            val profe3 = com.example.mysqliteexample.Models.Profesor("565","Jose",
+                "6578921","jose@gmail.com","josesito","profesor");
 
 
             if(profe1.cedula == user_name.toString() && profe1.clave == password.toString()){
 
-                val i = Intent(this, listView::class.java)
+                val i = Intent(this, MenuProfesor::class.java)
                 startActivity(i)
                 finish()
 
             }else{
                 Toast.makeText(this, "El usuario no se encuentra registrado", Toast.LENGTH_SHORT).show()
             }
+
+            if(profe2.cedula == user_name.toString() && profe2.clave == password.toString()){
+
+                val i = Intent(this, MenuProfesor::class.java)
+                startActivity(i)
+                finish()
+
+            }else{
+                Toast.makeText(this, "El usuario no se encuentra registrado", Toast.LENGTH_SHORT).show()
+            }
+
+            if(profe3.cedula == user_name.toString() && profe3.clave == password.toString()){
+
+                val i = Intent(this, MenuProfesor::class.java)
+                startActivity(i)
+                finish()
+
+            }else{
+                Toast.makeText(this, "El usuario no se encuentra registrado", Toast.LENGTH_SHORT).show()
+            }
+
 
         }
     }

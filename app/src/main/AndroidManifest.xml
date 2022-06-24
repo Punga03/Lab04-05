@@ -12,6 +12,12 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.MySqliteExample">
         <activity
+                android:name=".MenuProfesor"
+                android:exported="true"/>
+        <activity
+                android:name=".MenuAlumnos"
+                android:exported="true"/>
+        <activity
                 android:name=".LoginProfesor"
                 android:exported="true"/>
         <activity
