@@ -116,7 +116,7 @@ class ciclo : AppCompatActivity() {
     fun handleSearch()  {
         btnSearchCiclo.setOnClickListener(
             View.OnClickListener {
-                val res = dbHelper.searchData(codigo.text.toString())
+                val res = dbHelper.searchData(idCiclo.text.toString())
                 if (res.count == 0) {
                     showDialog("Error", "No Data Found")
                     return@OnClickListener

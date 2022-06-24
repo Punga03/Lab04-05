@@ -15,7 +15,7 @@ class DatabaseHelper(context: Context) :
                 ",NAME TEXT,TELEFONO TEXT,EMAIL TEXT, FECHANACIMIENTO TEXT, CARRERA TEXT)")
 
         db.execSQL("CREATE TABLE ${DatabaseHelperCursos.TABLE_NAME2} (CODIGO INTEGER PRIMARY KEY " +
-                "AUTOINCREMENT, NOMBRE TEXT,CREDITOS TEXT,  HORASSEMANALES TEXT)")
+                ", NOMBRE TEXT,CREDITOS TEXT,  HORASSEMANALES TEXT)")
 
         db.execSQL("CREATE TABLE ${DatabaseHelperProfesor.TABLE_NAME3} (CEDULA INTEGER PRIMARY KEY " +"" +
                 ", NOMBRE TEXT,TELEFONO TEXT, EMAIL TEXT )")
@@ -25,6 +25,9 @@ class DatabaseHelper(context: Context) :
 
         db.execSQL("CREATE TABLE ${DatabaseHelperCarrera.TABLE_NAME5} (CODIGO PRIMARY KEY " +
                 ", NOMBRE TEXT,TITULO TEXT, ANNO TEXT,CICLO TEXT )")
+
+        db.execSQL("CREATE TABLE ${DataBaseHelperGrupo.TABLE_NAME6} (NUMEROGRUPO INTEGER PRIMARY KEY " +
+                ", CICLO TEXT,CURSO TEXT, HORARIO TEXT, PROFESOR TEXT)")
     }
 
 

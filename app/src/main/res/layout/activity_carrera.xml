@@ -129,7 +129,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:padding="5dp"
-                android:text="CICLO: "
+                android:text="CICLO (1ero-2ndo): "
                 android:textColor="#3F51B5"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textStyle="bold" android:id="@+id/textView8"/>
@@ -139,7 +139,7 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="number"
+                android:inputType="textPersonName"
                 android:hint="CICLO"/>
     </LinearLayout>
     <LinearLayout

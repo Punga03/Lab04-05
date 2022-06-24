@@ -12,6 +12,9 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.MySqliteExample">
         <activity
+                android:name=".Grupo"
+                android:exported="true"/>
+        <activity
                 android:name=".Carrera"
                 android:exported="true"/>
         <activity
@@ -32,9 +35,9 @@
         <activity
                 android:name=".Cursos"
                 android:exported="true"/>
-
-        <activity android:name=".Inicio"  android:exported="true">
-
+        <activity
+                android:name=".Inicio"
+                android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

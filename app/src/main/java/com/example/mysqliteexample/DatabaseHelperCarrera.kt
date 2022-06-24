@@ -19,9 +19,10 @@ class DatabaseHelperCarrera(context: Context) :
         db.execSQL("DROP TABLE IF EXISTS " + DatabaseHelperCarrera.TABLE_NAME5)
         onCreate(db)
     }
-    fun insertData( nombre: String, titulo: String, fechaf: String, anno:String, ciclo:String) {
+    fun insertData(codigo: String, nombre: String, titulo: String, anno:String, ciclo:String) {
         val db = this.writableDatabase
         val contentValues = ContentValues()
+        contentValues.put(COL_1, codigo)
         contentValues.put(COL_2, nombre)
         contentValues.put(COL_3, titulo)
         contentValues.put(COL_4, anno)

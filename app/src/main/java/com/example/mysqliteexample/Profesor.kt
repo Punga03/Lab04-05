@@ -111,7 +111,7 @@ class Profesor : AppCompatActivity() {
     fun handleSearch()  {
         btnSearchP.setOnClickListener(
             View.OnClickListener {
-                val res = dbHelper.searchData(idTxt.text.toString())
+                val res = dbHelper.searchData(cedulaP.text.toString())
                 if (res.count == 0) {
                     showDialog("Error", "No Data Found")
                     return@OnClickListener

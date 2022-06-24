@@ -51,7 +51,7 @@ class Cursos : AppCompatActivity() {
     fun handleInserts() {
         insertBtn.setOnClickListener {
             try {
-                dbHelper.insertData(nombre.text.toString(),creditosTxt.text.toString(),idHoras.text.toString()
+                dbHelper.insertData(codigo.text.toString(),nombre.text.toString(),creditosTxt.text.toString(),idHoras.text.toString()
                   )
                 clearEditTexts()
             }catch (e: Exception){
@@ -105,7 +105,7 @@ class Cursos : AppCompatActivity() {
                     buffer.append("CODIGO :" + res.getString(0) + "\n")
                     buffer.append("NOMBRE :" + res.getString(1) + "\n")
                     buffer.append("CREDITOS :" + res.getString(2) + "\n")
-                    buffer.append("HORASSEMANALES :" + res.getString(3) + "\n")
+                    buffer.append("HORASSEMANALES :" + res.getString(3) + "\n\n")
                 }
                 showDialog("Data Listing", buffer.toString())
             }
@@ -125,7 +125,7 @@ class Cursos : AppCompatActivity() {
                     buffer.append("CODIGO :" + res.getString(0) + "\n")
                     buffer.append("NOMBRE :" + res.getString(1) + "\n")
                     buffer.append("CREDITOS :" + res.getString(2) + "\n")
-                    buffer.append("HORASSEMANALES :" + res.getString(3) + "\n")
+                    buffer.append("HORASSEMANALES :" + res.getString(3) + "\n\n")
                 }
                 showDialog("Dato", buffer.toString())
             }

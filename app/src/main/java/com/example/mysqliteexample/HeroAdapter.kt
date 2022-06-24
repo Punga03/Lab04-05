@@ -40,13 +40,13 @@ class HeroAdapter(val superhero:List<SuperHero>):RecyclerView.Adapter<HeroAdapte
                      intent = Intent(view.context, Profesor::class.java)
                 }
                 if(superhero.superHeroName=="Alumno"){
-                    intent = Intent(view.context, Alumno::class.java)
+                    intent = Intent(view.context, MainActivity::class.java)
                 }
                 if(superhero.superHeroName=="Carrera"){
                     intent = Intent(view.context, Carrera::class.java)
                 }
                 if(superhero.superHeroName=="Grupo"){
-                   // intent = Intent(view.context, Profesor::class.java)
+                    intent = Intent(view.context, Grupo::class.java)
                 }
                 if(superhero.superHeroName=="Curso"){
                      intent = Intent(view.context, Cursos::class.java)

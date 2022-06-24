@@ -48,8 +48,12 @@ class Carrera : AppCompatActivity() {
     fun handleInserts() {
         insertBtnCarrera.setOnClickListener {
             try {
-                dbHelper.insertData(idCarrera.text.toString(),idNombre.text.toString(),
-                    idTitulo.text.toString(),idAnno.text.toString(),idCICLO.text.toString())
+                dbHelper.insertData(
+                    idCarrera.text.toString(),
+                    idNombre.text.toString(),
+                    idTitulo.text.toString(),
+                    idAnno.text.toString(),
+                    idCICLO.text.toString())
                 clearEditTexts()
             }catch (e: Exception){
                 e.printStackTrace()
@@ -61,7 +65,8 @@ class Carrera : AppCompatActivity() {
     fun handleUpdates() {
         updateBtnCarrera.setOnClickListener {
             try {
-                val isUpdate = dbHelper.updateData(idCarrera.text.toString(),
+                val isUpdate = dbHelper.updateData(
+                    idCarrera.text.toString(),
                     idNombre.text.toString(),
                     idTitulo.text.toString(),
                     idAnno.text.toString(),
@@ -115,7 +120,7 @@ class Carrera : AppCompatActivity() {
     fun handleSearch()  {
         btnSearchCarrera.setOnClickListener(
             View.OnClickListener {
-                val res = dbHelper.searchData(codigo.text.toString())
+                val res = dbHelper.searchData(idCarrera.text.toString())
                 if (res.count == 0) {
                     showDialog("Error", "No Data Found")
                     return@OnClickListener

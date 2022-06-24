@@ -11,7 +11,7 @@ class DatabaseHelperCursos(context: Context) :
 
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL("CREATE TABLE $TABLE_NAME2 (CODIGO INTEGER PRIMARY KEY " +
-                "AUTOINCREMENT, NOMBRE TEXT,CREDITOS TEXT, HORASSEMANALES TEXT )")
+                ", NOMBRE TEXT,CREDITOS TEXT, HORASSEMANALES TEXT )")
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
@@ -19,9 +19,10 @@ class DatabaseHelperCursos(context: Context) :
         onCreate(db)
     }
 
-    fun insertData(nombre: String, creditos: String, horas: String) {
+    fun insertData(codigo: String, nombre: String, creditos: String, horas: String) {
         val db = this.writableDatabase
         val contentValues = ContentValues()
+        contentValues.put(COL_1, codigo)
         contentValues.put(COL_2, nombre)
         contentValues.put(COL_3, creditos)
         contentValues.put(COL_4, horas)
