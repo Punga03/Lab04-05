@@ -14,7 +14,7 @@ class Inicio : AppCompatActivity() {
             startActivity(Intent(this,Escoger::class.java))
         }*/
         findViewById<Button>(R.id.btnEntrar).setOnClickListener{
-            startActivity(Intent(this,listView::class.java))
+            startActivity(Intent(this,listViewPrincipal::class.java))
         }
     }
 }
