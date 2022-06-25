@@ -1,6 +1,7 @@
 package com.example.mysqliteexample.Models;
+import java.io.Serializable;
 
-public class Alumno {
+public class Alumno implements Serializable{
 
     private String cedula;
     private String nombre;

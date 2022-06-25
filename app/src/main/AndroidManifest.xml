@@ -57,6 +57,12 @@
                 android:name=".listViewPrincipal"
                 android:exported="true"/>
         <activity
+                android:name=".listViewEstudiantes"
+                android:exported="true"/>
+        <activity
+                android:name=".CalificarActivity"
+                android:exported="true"/>
+        <activity
                 android:name=".Inicio"
                 android:exported="true">
             <intent-filter>
