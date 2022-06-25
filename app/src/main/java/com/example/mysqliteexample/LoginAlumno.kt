@@ -37,27 +37,27 @@ class LoginAlumno : AppCompatActivity() {
                 finish()
 
             }else{
-                Toast.makeText(this, "El usuario no se encuentra registrado", Toast.LENGTH_SHORT).show()
+                if(alumno2.cedula == user_name.toString() && alumno2.clave == password.toString()){
+
+                    val i = Intent(this, MenuAlumnos::class.java)
+                    startActivity(i)
+                    finish()
+
+                }else{
+                    if(alumno3.cedula == user_name.toString() && alumno3.clave == password.toString()){
+
+                        val i = Intent(this, MenuAlumnos::class.java)
+                        startActivity(i)
+                        finish()
+
+                    }else{
+                        Toast.makeText(this, "El usuario no se encuentra registrado", Toast.LENGTH_SHORT).show()
+                    }
+                }
             }
-            if(alumno2.cedula == user_name.toString() && alumno2.clave == password.toString()){
 
-                val i = Intent(this, MenuAlumnos::class.java)
-                startActivity(i)
-                finish()
 
-            }else{
-                Toast.makeText(this, "El usuario no se encuentra registrado", Toast.LENGTH_SHORT).show()
-            }
 
-            if(alumno3.cedula == user_name.toString() && alumno3.clave == password.toString()){
-
-                val i = Intent(this, MenuAlumnos::class.java)
-                startActivity(i)
-                finish()
-
-            }else{
-                Toast.makeText(this, "El usuario no se encuentra registrado", Toast.LENGTH_SHORT).show()
-            }
 
         }
 
