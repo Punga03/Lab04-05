@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".Matricula" android:background="#00BCD4">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="62dp">
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+        <TextView
+                android:text="MATRICULA DE GRUPOS"
+                android:layout_width="401dp"
+                android:layout_height="47dp" android:id="@+id/textView4" android:layout_weight="1"
+                android:textAlignment="center" android:textStyle="bold" android:textColor="#3F51B5"
+                android:textSize="24sp"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+        <Button
+                android:text="GRUPOS DISPONIBLES"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp" android:id="@+id/btnDesplegar" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="59dp">
+        <EditText
+                android:id="@+id/numeroGrupoBuscarM"
+                android:layout_width="699dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="NUMERO DE GRUPO"/>
+        <Button
+                android:text="BUSCAR GRUPO POR ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/btnBuscarGr"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="33dp">
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:id="@+id/nameLabel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:text="# DE GRUPO:"
+                android:textColor="#3F51B5"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"/>
+        <EditText
+                android:id="@+id/numeroGrupoMatricula"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="NUMERO DE GRUPO POR MATRICULAR" android:textSize="15sp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="31dp">
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <Button
+                android:id="@+id/matricularBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="MATRICULAR"/>
+
+    </LinearLayout>
+
+</LinearLayout>
