@@ -34,6 +34,12 @@ class Matricula : AppCompatActivity() {
 
         handleViewing()
         handleSearch()
+
+        findViewById<Button>(R.id.matricularBtn).setOnClickListener{
+            Toast.makeText(this, "HA SIDO MATRICULADO", Toast.LENGTH_LONG).show()
+
+            startActivity(Intent(this,listViewPrincipal::class.java))
+        }
     }
 
     fun handleViewing() {
